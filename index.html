@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="h1" title="INICIO">
+            <a href="#">#Crystina_G</a>
+        </h1>
+        <button id="toggleButton" class="button">
+            <svg id="open" class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg id="close" class="svgX" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path
+                    d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z" />
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+        </button>
+        <nav class="nav">
+            <ul class="ul">
+                <li class="li"><a href="#inicio" title="Inicio">INICIO</a></li>
+                <li class="li"><a href="#portfolio" title="Trabajos">PROYECTOS</a></li>
+                <li class="li"><a href="#skills">HABILIDADES</a></li>
+                <li class="li"><a href="#sobremi">SOBRE_MI</a></li>
+                <li class="li"><a href="#contacto" title="Contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="inicio">
+        <div class="banner">
+            <div class="banner__img">
+                <img src="img/c.jpg" alt="Logo">
+            </div>
+            <div class="banner__text">
+                <h1>Cristina Gonzalez</h1>
+                <h2>FRONTEND Designer</h2>
+            </div>
+            <div class="banner__repo">
+                <i class="fa-solid fa-hand-pointer fa-rotate-90"></i>
+                <a href="#"><i class="fa-brands fa-github" title="Chequea mi REPO"></i></a>
+            </div>
+            <div class="banner__redes">
+                <a href="https://www.instagram.com/crystina_gonzalez/#" target="_blank" rel="noopener no-referrer"><i
+                        class="fa-brands fa-square-instagram" title="EDICION"></i></a>
+                <a href="https://www.youtube.com/channel/UCk8LWXwUU3iu9NSj6bPn7zA" target="_blank"
+                    rel="noopener no-referrer"><i class="fa-brands fa-youtube" title="TUTORIALES"></i></a>
+                <span>
+                    <a href="https://www.linkedin.com/in/cristina-gonzalez-9337b0233/" target="_blank"
+                        rel="noopener no-referrer"><i class="fa-brands fa-linkedin" title="PROFILE"></i></a>
+                </span>
+            </div>
+        </div>
+
+    </section>
+    <section id="portfolio" class="portfolio">
+        <h2>PROYECTOS</h2>
+        <div class="portfolio__grid">
+            <article class="article">
+                <a href="#" title="Proyecto1">
+                    <figure class="figure">
+                        <img src="img/sitio.png" alt="SitioWeb" loading="lazy">
+                    </figure>
+                    <h3>Sitio Web</h3>
+                </a>
+                <a href="#" title="Proyecto2">
+                    <figure class="figure">
+                        <img src="img/redescompu.jpg" alt="Auditoria" loading="lazy">
+                    </figure>
+                    <h3>Auditoria</h3>
+                </a>
+            </article>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="habilidades">
+            <h2>Habilidades</h2>
+            <div class="habilidades__col">
+                <ul class="ul">
+                    <li class="li">
+                        <figure class="logo"><img src="img/Html5.png" title="HTML5" alt="HTML5"></figure>
+                    </li>
+                    <li class="li">
+                        <figure class="logo"><img src="img/CSS.png" title="Css3" alt="CSS3"></figure>
+                    </li>
+                    <li class="li">
+                        <figure class="logo"><img src="img/JAvas.png" title="JavaScript" alt="JS"></figure>
+                    </li>
+                    <li class="li">
+                        <figure class="logo"><img src="img/sass-1-logo.png" title="Sass" alt="Sass"></figure>
+                    </li>
+                    <li class="li">
+                        <figure class="logo"><img src="img/reactpng.png" title="React" alt="React"></figure>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="sobremi" class="sobremi">
+        <h2>Sobre Mi</h2>
+        <p><span>Soy Crys y este es mi segundo proyecto web.</span>Mi pasión es la tecnología. Me encanta ser capaz
+            de solucionar problemas, investigar y aprender como opera el hardware y el software. Inicié mis estudios
+            en 2022 de manera autodidacta y luego ingresé a la Carrera Técnica.</p>
+        <p>Actualmente estoy especializándome en Desarrollo Web con React. Dedico un tiempo al estudio de la
+            ciberseguridad, y mis ratos libres a la Edición mutimedial.</p>
+        <div class="sobremi__seccion">
+            <div class="colizq">
+                <h3>Herramientas que uso</h3>
+                <ul>
+                    <li><strong>Blog</strong> building</li>
+                    <li><i class="fa-brands fa-github"></i><span>github</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="colder">
+                <h3>Intereses</h3>
+                <div class="colder__interes">
+                    <div class="interes">
+                        <i class="fa-brands fa-linux"></i>
+                        <span>LINUX</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-android"></i><span>ANDROID</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-sharp fa-solid fa-headphones"></i>
+                        <span>AUDACITY</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-video"></i>
+                        <span>EDICION</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="descarga">
+            Descargar CV <i class="fa-solid fa-download"></i>
+            <span class="overlay"></span>
+        </button>
+    </section>
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form class="formulario-contacto">
+            <div class="campo">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" minlength="6" maxlength="50" autocomplete="off" required>
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="off" required>
+            </div>
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" autocomplete="on" required></textarea>
+            </div>
+            <div class="campo">
+                <input type="submit" value="Enviar" id="submitButton">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <span class="span">Este ha sido mi Portfolio personal</span>
+    </footer>
+    <script defer src="menu.js"></script>
+</body>
+
+</html>

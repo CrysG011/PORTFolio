@@ -5,21 +5,48 @@ button.addEventListener('click', () => {
 })
 
 const toggleButton = document.getElementById('toggleButton');
-const open = document.getElementById('open');
-const close = document.getElementById('close');
+const openCubes = Array.from(document.querySelectorAll("#open-cubes rect"));
+const closeCubes = Array.from(document.querySelectorAll("#close-cubes rect"));
+let locked = false;
 
-toggleButton.addEventListener('click', function () {
-  if (open.style.display === 'none') {
-    open.style.display = 'block';
-    close.classList.toggle('fade');
-    close.style.display = 'none';
+const openEffect = (cubes) => {
+  cubes.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.remove("spin-in");
+      element.classList.add("spin-out");
+    }, index * 10);
+  });
+};
 
-  } else {
-    open.classList.toggle('fade');
-    open.style.display = 'none';
-    close.style.display = 'block';
+const closeEffect = (cubes) => {
+  cubes.forEach((element, index) => {
+    setTimeout(() => {
+      element.classList.remove("spin-out");
+      element.classList.add("spin-in");
+    }, index * 10);
+  });
+};
+
+button.addEventListener("click", (e) => {
+  if (!locked) {
+    locked = true;
+    button.classList.toggle("active");
+    const length = openCubes.length;
+
+    if (button.classList.contains("active")) {
+      openEffect(openCubes);
+      closeEffect(closeCubes);
+    } else {
+      closeEffect(openCubes);
+      openEffect(closeCubes);
+    }
+
+    setTimeout(() => {
+      locked = false;
+    }, 1300 + length * 10);
   }
 });
+
 
 const textarea = document.getElementById('mensaje');
 const maxLength = 300;

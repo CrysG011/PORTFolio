@@ -379,7 +379,7 @@ button svg #close-cubes rect {
     display: flex;
     font-size: 2.375rem;
     text-align: center;
-    letter-spacing: .12rem;
+    letter-spacing: .2rem;
     padding: 1.25rem 0;
     margin: 0;
     color: hslahsl(0 0% 90%);
@@ -388,7 +388,6 @@ button svg #close-cubes rect {
     /* left: -1, center: 0, right: 1 */
     --light-pos-y: -1;
     /* top: -1, center: 0, bottom: 1 */
-
     --rim-size: .02ch;
     --shadow-offset: .2ch;
     --shadow-blur: .1ch;
@@ -561,13 +560,24 @@ button svg #close-cubes rect {
 .sobremi {
     width: 100vw;
     height: fit-content;
-    /*background-image: url("https://www.pngkey.com/png/full/20-206535_sound-waves-background-transparent.png");*/
-    background-image: url("https://media4.giphy.com/media/d2jjHeKDynBohPtm/giphy.gif");
-    background-position: center;
-    background-size: cover;
+    position: relative;
     color: #fff;
     padding: 3.125rem 1.25rem;
-    box-shadow: 9 9 6px 9px rgba(0, 0, 0, 0.2);
+    border-radius: .7rem;
+    box-shadow: .3rem .3rem .375rem .5625rem rgba(0, 0, 0, 0.2);
+}
+.sobremi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/cora.png");
+    background-position: center;
+    background-size: contain;
+    filter: blur(.3rem); 
+    z-index: -1;
 }
 
 .sobremi__intro {
@@ -575,17 +585,33 @@ button svg #close-cubes rect {
     grid-template-columns: 1fr;
     gap: 1rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-style: none;
+    border-radius: .7rem;
+    box-shadow: 1.25rem 1rem 2.5rem #190A05,
+        -1.25rem -1.25rem 2.5rem rgba(253, 147, 151, 0.1);
 }
 
 .sobremi__intro h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.375rem;
-    font-family: inherit;
     text-align: center;
+    letter-spacing: .2rem;
     padding: 1.25rem 0;
-    justify-content: flex-start;
-    letter-spacing: .12rem;
-
-    border: none;
+    margin: 0;
+    color: hslahsl(0 0% 90%);
+    text-align: center;
+    --light-pos-x: 1;
+    --light-pos-y: -1;
+    --rim-size: .02ch;
+    --shadow-offset: .2ch;
+    --shadow-blur: .1ch;
+    text-shadow:
+        calc(max(var(--rim-size), 1px) * var(--light-pos-x)) calc(max(var(--rim-size), 1px) * var(--light-pos-y)) hsl(0 0% 100%),
+        calc(max(var(--rim-size), 1px) * var(--light-pos-x) * -1) calc(max(var(--rim-size), 1px) * var(--light-pos-y) * -1) hsl(0 0% 60%),
+        calc(var(--shadow-offset) * var(--light-pos-x) * -1) calc(var(--shadow-offset) * var(--light-pos-y) * -1) var(--shadow-blur) hsl(0 0% 50% / .75)
 }
 
 .sobremi__intro p {
@@ -604,10 +630,11 @@ button svg #close-cubes rect {
     max-width: 100vw;
     margin: auto;
     gap: 1rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1em;
+    text-align: center;
+    
 }
 
 .sobremi__seccion h3 {
@@ -633,16 +660,18 @@ button svg #close-cubes rect {
     width: 100%;
     height: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     border-style: none;
 }
 
 .colizq {
     flex-flow: column wrap;
-    align-items: flex-start;
     margin: 1rem;
-    background-image: url("https://dbdzm869oupei.cloudfront.net/img/sticker/preview/407.png");
-    background-size: cover;
+    /*background-image: url("https://dbdzm869oupei.cloudfront.net/img/sticker/preview/407.png");*/
+    background-size: contain;
     background-position: center;
+    object-fit: contain;
 }
 
 .animation {
@@ -655,7 +684,6 @@ button svg #close-cubes rect {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
-
 }
 
 .colizq li {
@@ -680,10 +708,8 @@ button svg #close-cubes rect {
 
 .colder {
     flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: flex-end;
     margin: 1rem;
-    background-image: url("https://cdn.pixabay.com/photo/2019/09/23/09/16/cyber-security-4498009_1280.png");
+    
     background-size: cover;
     background-position: center;
     border-style: none;
@@ -729,16 +755,8 @@ button svg #close-cubes rect {
         font-size: 1rem;
     }
 
-    .sobremi {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .colizq {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    .sobremi__seccion {
+        grid-template-columns:repeat(1, 1fr);
     }
 
     .colder__interes {
@@ -774,7 +792,8 @@ button svg #close-cubes rect {
     display: block;
     margin: 1.25rem auto;
     padding: .625rem 1.375rem;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-family: inherit;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -799,10 +818,6 @@ button svg #close-cubes rect {
     background-position: 100% 0;
     /* Desplaza el gradiente completamente a la derecha al pasar el cursor sobre el elemento */
 }
-
-
-
-
 
 .contacto {
     width: 100vw;

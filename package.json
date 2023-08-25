@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "animate.css": "^4.1.1"
-  }
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "menu.js",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrysG011/PORTFolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrysG011/PORTFolio/issues"
+  },
+  "homepage": "https://github.com/CrysG011/PORTFolio#readme",
+  "description": ""
 }

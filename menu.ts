@@ -5,8 +5,9 @@ button.addEventListener('click', () => {
 });
 
 const toggleButton = document.getElementById('toggleButton') as HTMLButtonElement;
-const openCubes = Array.from(document.querySelectorAll("#open-cubes rect"));
-const closeCubes = Array.from(document.querySelectorAll("#close-cubes rect"));
+const openCubes = Array.from(document.querySelectorAll("#open-cubes rect")) as Element[];
+const closeCubes = Array.from(document.querySelectorAll("#close-cubes rect")) as Element[];
+
 let locked = false;
 
 const openEffect = (cubes: HTMLElement[]) => {

@@ -1,7 +1,7 @@
 <div align='center'>
 
-<h1>Camino a ser Pentester</h1>
-<p>Aquí dejaré plasmada mi ruta de aprendizaje para convertirme en pentester. Estoy conociendo el mágico mundo del desarrollador poniendo en práctica una de mis pasiones como el diseño y la edición.</p>
+<h1>Mi portafolio...</h1>
+<p>Cada proyecto ha sido concebido con el objetivo de aplicar diversas tecnologías a medida que las voy adquiriendo, con la expectativa de identificar y corregir posibles errores en el proceso.</p>
 
 <h4> <span> · </span> <a href="https://github.com/CrysG011/PORTFolio/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/CrysG011/PORTFolio/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/CrysG011/PORTFolio/issues"> Request Feature </a> </h4>
 

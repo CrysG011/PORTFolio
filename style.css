@@ -8,8 +8,9 @@
     src: url("/fonts/BubblerOne-Regular.ttf");
 }
 :root {
-    --bg: #3C465C;
-    --primary: #ffcfcfe7;
+    --primary: #830A05;
+    --bg-light: #F7A69F;
+    --bg-dark: #190402; 
     --solid: #fff;
     --btn-w: 10em;
     --dot-w: calc(var(--btn-w)*.2);
@@ -47,9 +48,9 @@ svg {
     fill: currentColor;
 }
 
-@supports (accent-color: #460101) {
+@supports (accent-color: #E02215) {
     :root {
-        accent-color: #460101;
+        accent-color: #E02215;
     }
 }
 
@@ -58,12 +59,12 @@ body {
     font-size: 100%;
     width: 100vw;
     height: auto;
-    background: linear-gradient(to right, #190A05, #870000);
+    background: linear-gradient(to top, var(--bg-dark), var(--primary));
     overflow-x: hidden;
 }
 
 .header {
-    background: linear-gradient(to right, #190A05, #870000);
+    background: linear-gradient(to top, var(--bg-dark), var(--primary));
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -83,7 +84,7 @@ body {
 
 .header .h1 a {
     font-family: "BubblerOne-Regular";
-    color: rgba(190, 84, 84, 0.9);
+    color: var(--bg-light);
     text-decoration: none;
 }
 
@@ -92,7 +93,7 @@ body {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    background-color: var(--primary);
+    background-color: var(--bg-light);
     border: none;
     border-radius: 3.125rem;
     cursor: pointer;
@@ -104,7 +105,7 @@ body {
 
 button.active #open-cubes rect,
 button.active #close-cubes rect {
-    fill: hsl(0, 93%, 40%);
+    fill: #E02215;
 }
 
 .button svg {
@@ -177,15 +178,22 @@ button svg #close-cubes rect {
 }
 
 .header .li a {
-    color: var(--primary);
+    color: var(--bg-light);
     font-family: inherit;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .header .li a:hover {
-    background-color: #190A05;
-    font-size: 1.05em;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }
 
 @media screen and (max-width:535px) {
@@ -226,7 +234,7 @@ button svg #close-cubes rect {
     background-position: center;
     background-attachment: fixed;
     height: fit-content;
-    color: #fff;
+    color: var(--solid);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,6 +312,7 @@ button svg #close-cubes rect {
     position: relative;
     animation: girar 4s 6 linear;
     margin-bottom: 1.9rem;
+    transition: .6s;
 }
 
 .banner__repo i {
@@ -312,7 +321,6 @@ button svg #close-cubes rect {
 }
 
 .banner__repo a i:hover {
-    transition: .6s;
     transform: scale(3);
 }
 
@@ -343,9 +351,8 @@ button svg #close-cubes rect {
 .banner__redes a {
     width: 100%;
     height: fit-content;
-    color: #fff;
+    color: var(--solid);
     text-decoration: none;
-    background: rgba(255, 254, 254, 0.1);
     border-radius: 9.375rem;
     box-shadow: .5rem .5rem 1.125rem rgba(253, 147, 151, 0.155),
         -0.56rem -0.56rem 1.12rem rgba(253, 147, 151, 0.318);
@@ -355,7 +362,6 @@ button svg #close-cubes rect {
 }
 
 .banner__redes i:hover {
-    background-color: rgba(128, 7, 11, 0.956);
     transform: scale(3);
     border-radius: .7rem;
 }
@@ -386,7 +392,7 @@ button svg #close-cubes rect {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: var(--solid);
     padding: 3.125rem 1.25rem;
     background-image: url("https://media4.giphy.com/media/yuWuZKpzdyuMMSaSaO/giphy.gif?cid=ecf05e47c1s2d7fjhi29b60qlkb8hzfcdtcjs43nisoe3k79&ep=v1_stickers_search&rid=giphy.gif&ct=s");
     background-size: cover;
@@ -431,7 +437,7 @@ button svg #close-cubes rect {
     gap: 1rem;
     place-items: center;
     align-self: center;
-    background: rgba(84, 1, 1, 0.545);
+    
     box-shadow: inset .4rem .4rem .8rem #681e1e,
         inset -.4rem -.4rem .8rem #3e0d0d;
     margin: auto;
@@ -499,7 +505,7 @@ button svg #close-cubes rect {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .habilidades__title h2 {
@@ -655,7 +661,7 @@ button svg #close-cubes rect {
 
 .sobremi__seccion {
     max-width: 100vw;
-    margin: auto;
+    margin-top: 1rem;
     gap: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -673,20 +679,6 @@ button svg #close-cubes rect {
     color: #190A05;
     background-image: radial-gradient(circle, #190A05, rgba(248, 130, 130, 0.1));
     line-height: 1;
-}
-
-.colizq,
-.colder {
-    text-align: center;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    border-style: none;
-    padding: 1rem;
-    gap: 1rem;
 }
 
 .herramientas {
@@ -707,34 +699,6 @@ button svg #close-cubes rect {
     height: auto;
 }
 
-.colder__interes {
-    display: flex;
-    flex-direction: row;
-    object-position: right;
-    justify-content: right;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.interes {
-    max-width: 6rem;
-    height: auto;
-    gap: 0.5rem;
-    padding: .3rem;
-    background-color: #5f1c1c;
-    border-radius: .625rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in;
-}
-
-.interes i {
-    font-size: 2em;
-    padding: .3rem;
-}
-
 @media screen and (max-width:535px) {
     .contenido__seccion p {
         font-size: 1em;
@@ -742,31 +706,6 @@ button svg #close-cubes rect {
 
     .sobremi__seccion {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-    .colder__interes {
-        display: flex;
-        flex-direction: row;
-        object-position: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .interes {
-        width: 3.3rem;
-        height: 3.3rem;
-    }
-
-    .interes i {
-        font-size: 1.5em;
-        width: inherit;
-        height: inherit;
-    }
-
-    .interes span {
-        font-size: .7em;
-        width: inherit;
-        height: inherit;
     }
 }
 
@@ -837,6 +776,11 @@ button svg #close-cubes rect {
     box-shadow: 1.25rem 1rem 2.5rem #870000,
         -1.25rem -1.25rem 2.5rem rgba(253, 147, 151, 0.1);
 }
+.contacto__campos {
+    display: flex;
+    flex-flow: column wrap;
+    padding: .3em;
+}
 
 .campo {
     display: flex;
@@ -861,7 +805,6 @@ input {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     font-weight: bold;
     font-size: large;
-    margin: .3rem;
 }
 
 textarea {
@@ -870,6 +813,7 @@ textarea {
 }
 .btn {
     position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
     margin: 0 auto;
     width: var(--btn-w);
     color: var(--primary);

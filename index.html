@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Crystina_G</title>
+
+    <meta name="description" content="Portfolio de Cristina González">
+    <link rel="icon" type="image/png" href="img/logoCG.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -190,20 +194,19 @@
     <section id="inicio" class="inicio">
         <div class="banner">
             <div class="banner__img">
-                <img src="img/logo.png" alt="Logo">
+                <img src="img/logoCG.png" alt="Mi Logo">
             </div>
             <div class="banner__text">
-                <h1 class="animate__animated animate__flip animate__slow">Cristina Gonzalez</h1>
-                <h2>FRONTEND Designer</h2>
+                <h1 class="animate__animated animate__bounce">Cristina Gonzalez</h1>
+                <h2>FULLSTACK</h2>
             </div>
             <div class="banner__repo">
                 <i class="fa-solid fa-hand-pointer fa-rotate-90"></i>
                 <a href="#"><i class="fa-brands fa-github" title="Chequea mi REPO"></i></a>
             </div>
             <div class="banner__redes">
-                <a href="https://www.instagram.com/crystina_gonzalez/#" target="_blank" rel="noopener no-referrer"><i
-                        class="fa-brands fa-square-instagram" title="EDICION"></i></a>
-                <a href="https://www.youtube.com/channel/UCk8LWXwUU3iu9NSj6bPn7zA" target="_blank"
+                <a href="https://www.instagram.com/crystina_gonzalez/#" target="_blank" rel="noopener no-referrer"><i class="fa-brands fa-gitlab" title="DESPLIEGUE y ORQUESTACIÓN"></i></a>
+                <a href="https://gitlab.com/crystinagonz" target="_blank"
                     rel="noopener no-referrer"><i class="fa-brands fa-youtube" title="TUTORIALES"></i></a>
                 <span>
                     <a href="https://www.linkedin.com/in/crystina-g-cristina-gonzalez-9337b0233/" target="_blank"
@@ -217,7 +220,7 @@
         <h2>PROYECTOS</h2>
         <div class="portfolio__flex">
             <article class="portfolio__grid">
-                <a href="https://crysg011.github.io/SitioWeb/" target="_blank" title="Proyecto1">
+                <a href="https://crysg011.github.io/SitioWeb/" target="_blank" rel="noopener no-referrer" title="Proyecto1">
                     <figure class="figure">
                         <img src="img/proyecto1.jpg" alt="SitioWeb" loading="lazy">
                     </figure>
@@ -261,36 +264,15 @@
                 ciberseguridad, y mis ratos libres a la Edición mutimedial.</p>
         </div>
         <div class="sobremi__seccion">
-            <div class="colizq">
-                <h3 class="border">Herramientas que uso</h3>
-                <ul class="herramientas">
-                    <li><img src="/img/notion.png" alt="Notion"></li>
-                    <li><img src="/img/FIGMA.png" alt="Figma"></li>
-                    <li><img src="/img/gimp.png" alt=""></li>
-                </ul>
-            </div>
-            <div class="colder">
-                <h3 class="border">Intereses</h3>
-                <div class="colder__interes">
-                    <div class="interes">
-                        <i class="fa-brands fa-linux"></i>
-                        <span>LINUX</span>
-                    </div>
-                    <div class="interes">
-                        <i class="fa-brands fa-android"></i><span>ANDROID</span>
-                    </div>
-                    <div class="interes">
-                        <i class="fa-sharp fa-solid fa-headphones"></i>
-                        <span>AUDACITY</span>
-                    </div>
-                    <div class="interes">
-                        <i class="fa-solid fa-tower-broadcast"></i>
-                        <span>TELEC</span>
-                    </div>
-                </div>
-
-            </div>
+        
+            <h3 class="border">Herramientas que uso</h3>
+            <ul class="herramientas">
+                <li><img src="/img/notion.png" alt="Notion"></li>
+                <li><img src="/img/FIGMA.png" alt="Figma"></li>
+                <li><img src="/img/gimp.png" alt=""></li>
+            </ul>
         </div>
+            
         <button class="descarga">
             Descargar CV <i class="fa-solid fa-download"></i>
             <span class="overlay"></span>
@@ -298,19 +280,23 @@
     </section>
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
-        <form class="contacto__form">
-            <div class="campo">
-                <label for="nombre">Nombre y Apellido:</label>
-                <input type="text" id="nombre" name="nombre" minlength="6" maxlength="50" autocomplete="off" required>
-            </div>
-            <div class="campo">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" autocomplete="off" required>
-            </div>
-            <div class="campo">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" autocomplete="on" required></textarea>
-            </div>
+        <form class="contacto__form" method="post" action="/">
+            <fieldset class="contacto__campos">
+                <legend>Info Personal</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" minlength="6" maxlength="50" autocomplete="off" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" autocomplete="off" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" autocomplete="on" required></textarea>
+                </div>
+            </fieldset>
+           
             <div class="btn">
                 <span>Enviar </span><i class="fa-solid fa-eject"></i>
                 <div class="dot"></div>
